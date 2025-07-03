@@ -1,0 +1,49 @@
+{
+  "name": "test_jail",
+  "hostname": "jail",
+  "chroot_dir": "/tmp/jail_root",
+  "exec_bin": "/bin/bash",
+  "exec_args": ["/bin/bash"],
+  "clone_newpid": true,
+  "clone_newnet": false,
+  "clone_newns": true,
+  "clone_newuts": true,
+  "clone_newipc": true,
+  "clone_newuser": true,
+  "rlimit_as": 134217728,
+  "rlimit_cpu": 10,
+  "rlimit_nofile": 64,
+  "mounts": [
+    {
+      "src": "/bin",
+      "dst": "/bin",
+      "fstype": null,
+      "is_bind": true,
+      "rw": false
+    },
+    {
+      "src": "/lib",
+      "dst": "/lib",
+      "fstype": null,
+      "is_bind": true,
+      "rw": false
+    },
+    {
+      "src": "/lib64",
+      "dst": "/lib64",
+      "fstype": null,
+      "is_bind": true,
+      "rw": false
+    },
+    {
+      "src": "/usr",
+      "dst": "/usr",
+      "fstype": null,
+      "is_bind": true,
+      "rw": false
+    }
+  ],
+  "uid": 1000,
+  "gid": 1000,
+  "time_limit": 30
+}
